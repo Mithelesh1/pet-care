@@ -1,0 +1,43 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+header {
+  background-color: #2e86de;
+  color: white;
+  padding: 30px 10px;
+}
+
+.services {
+  padding: 20px;
+}
+
+.services ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.services li {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+footer {
+  background-color: #dfe6e9;
+  padding: 10px;
+}

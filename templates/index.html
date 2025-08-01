@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pet Care Hub</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-image: url("{{ url_for('static', filename='3.jpg') }}");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 50px;
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+      border-radius: 50%;
+    }
+
+    .brand {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #ff6600;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: 600;
+      padding: 8px 14px;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+      background-color: transparent;
+    }
+
+    nav a:hover {
+      background-color: #ff6600;
+      color: #fff;
+    }
+
+    .hero-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 80px 10%;
+      background-color: rgba(0, 0, 0, 0.5);
+      flex-wrap: wrap;
+      flex: 1;
+    }
+
+    .hero-text {
+      flex: 1;
+      margin-right: 40px;
+    }
+
+    .hero-text h1 {
+      font-size: 4rem;
+      color: #ff6600;
+      margin: 0;
+    }
+
+    .hero-text h2 {
+      font-size: 2.8rem;
+      margin: 10px 0 30px;
+      color: white;
+    }
+
+    .hero-text button {
+      background-color: #ff6600;
+      color: white;
+      padding: 14px 28px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .hero-text button:hover {
+      background-color: #e65300;
+    }
+
+    footer {
+      background-color: rgba(0, 0, 0, 0.7);
+      text-align: center;
+      padding: 15px 20px;
+      font-size: 0.95rem;
+      color: #ddd;
+      margin-top: auto;
+    }
+
+    footer a {
+      color: #ff6600;
+      text-decoration: none;
+      margin: 0 8px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media(max-width: 768px) {
+      .hero-section {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero-text {
+        margin-right: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo-container">
+    <img src="{{ url_for('static', filename='3.png') }}" alt="Logo" class="logo">
+    <div class="brand">Pet Care Hub</div>
+  </div>
+  <nav>
+    <a href="/about">About</a>
+    <a href="/donate">Donate Pet</a>
+    <a href="/contact">Contact</a>
+    <a href="/login">Login</a>
+  </nav>
+</header>
+
+<section class="hero-section">
+  <div class="hero-text">
+    <h1>Give a homeless pet a </h1>
+    <h2>home</h2>
+  </div>
+</section>
+
+<footer>
+  © 2025 Pet Care Hub | <a href="/privacy">Privacy Policy</a> | <a href="/terms">Terms of Service</a>
+</footer>
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book Your Pet Care</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f2f2;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .booking-container {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 60px auto;
+      max-width: 1200px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      overflow: hidden;
+      flex-grow: 1;
+    }
+
+    .booking-form {
+      flex: 1;
+      background-color: #f15a29;
+      padding: 40px;
+    }
+
+    .booking-form h2 {
+      color: white;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .booking-form input, .booking-form select {
+      width: 100%;
+      padding: 12px;
+      margin: 12px 0;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    .booking-form button {
+      width: 100%;
+      padding: 14px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      background-color: black;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .booking-form button:hover {
+      background-color: #333;
+    }
+
+    .booking-info {
+      flex: 1;
+      background-color: white;
+      padding: 40px;
+    }
+
+    .booking-info h3 {
+      color: #1abc9c;
+      margin-bottom: 10px;
+    }
+
+    .booking-info h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .booking-info h1 span {
+      color: #f15a29;
+    }
+
+    .service {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .service-icon {
+      font-size: 2rem;
+      color: #1abc9c;
+      margin-right: 15px;
+    }
+
+    .service-desc h4 {
+      margin: 0;
+      font-weight: 600;
+    }
+
+    .service-desc p {
+      margin: 4px 0 0;
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    footer {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      font-size: 0.9rem;
+      margin-top: auto;
+    }
+
+    @media (max-width: 768px) {
+      .booking-container {
+        flex-direction: column;
+      }
+    }
+  </style>
+  <style>
+  body {
+    background-image: url("{{ url_for('static', filename='9.jpg') }}");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  form {
+    background-color: #f15a29;
+  }
+</style>
+</head>
+<body>
+
+  <div class="booking-container">
+    <div class="booking-form">
+      <h2>Book Now</h2>
+      <form action="/my_booking" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="date" name="date" required>
+        <input type="time" name="time" required>
+        <select name="service" required>
+          <option value="">Select A Service</option>
+          <option value="Pet Boarding">Pet Boarding</option>
+          <option value="Pet Feeding">Pet Feeding</option>
+          <option value="Pet Grooming">Pet Grooming</option>
+          <option value="Pet Training">Pet Training</option>
+        </select>
+        <button type="submit">Book Now</button>
+      </form>
+    </div>
+
+    <div class="booking-info">
+      <h3>Going for a vacation?</h3>
+      <h1>Book For <span>Your Pet</span></h1>
+
+      <div class="service">
+        <div class="service-icon">🏠</div>
+        <div class="service-desc">
+          <h4>Pet Boarding</h4>
+          <p>Safe, secure place and  Daily exercise and playtime sessions.</p>
+        </div>
+      </div>
+
+      <div class="service">
+        <div class="service-icon">🍖</div>
+        <div class="service-desc">
+          <h4>Pet Feeding</h4>
+          <p>Timely meals for all pets. Fresh, hygienic food preparation.</p>
+        </div>
+      </div>
+
+      <div class="service">
+        <div class="service-icon">✂️</div>
+        <div class="service-desc">
+          <h4>Pet Grooming</h4>
+          <p>Clean and style your pet beautifully. Nail clipping, brushing.</p>
+        </div>
+      </div>
+
+      <div class="service">
+        <div class="service-icon">🎓</div>
+        <div class="service-desc">
+          <h4>Pet Training</h4>
+          <p>Behavioral and obedience training. Sit, stay, off-leash control.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Pet Care Hub | All rights reserved.
+  </footer>
+
+</body>
+</html>

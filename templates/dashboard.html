@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 40px;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f6f8fa;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      background-image: url("{{ url_for('static', filename='1.jpg') }}");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    h1 {
+      color: #ff6600;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    /* Grid container for buttons */
+    .button-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      width: 100%;
+      max-width: 500px;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 25px;
+      background-color: #ff6600;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: transform 0.2s ease, background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #e65300;
+      transform: scale(1.05); /* Slight zoom on hover */
+    }
+
+    .logout-btn {
+      background-color: #c0392b;
+    }
+
+    .logout-btn:hover {
+      background-color: #922b21;
+    }
+
+    footer {
+      margin-top: auto;
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      font-size: 0.9rem;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Welcome, {{ username }}!</h1>
+  <p>This is your dashboard.</p>
+
+  <div class="button-grid">
+    <a href="/add-pet" class="btn">➕ Add Pet</a>
+    <a href="/pets" class="btn">🐾 View My Pets</a>
+    <a href="/book" class="btn">📅 Book a Service</a>
+    <a href="/my-bookings" class="btn">🗒 My Bookings</a>
+    <a href="/logout" class="btn logout-btn">🚪 Logout</a>
+  </div>
+
+  <footer>
+    © 2025 Pet Care Hub | All rights reserved.
+  </footer>
+
+</body>
+</html>

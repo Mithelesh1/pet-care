@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+      body {
+        font-family: 'Segoe UI', sans-serif;
+        background-image: url("{{ url_for('static', filename='5.jpg') }}");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin: 0;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      h2 {
+        color: #333;
+        text-align: center;
+      }
+
+      form {
+        display: inline-block;
+        padding: 30px;
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      }
+
+      .form-container {
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      input {
+        display: block;
+        width: 250px;
+        padding: 10px;
+        margin: 10px auto;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+      }
+
+      button {
+        background-color: #ff6600;
+        color: white;
+        padding: 12px 25px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+
+      button:hover {
+        background-color: #e65c00;
+      }
+
+      .social-btn {
+        display: block;
+        width: 250px;
+        padding: 10px;
+        margin: 10px auto;
+        color: white;
+        text-decoration: none;
+        border-radius: 6px;
+        font-weight: 600;
+        transition: background 0.3s;
+      }
+
+      .google {
+        background-color: #db4437;
+      }
+      .google:hover {
+        background-color: #c1351d;
+      }
+
+      .facebook {
+        background-color: #3b5998;
+      }
+      .facebook:hover {
+        background-color: #2d4373;
+      }
+
+      .link {
+        margin-top: 15px;
+        display: block;
+        color: #ff6600;
+        text-decoration: none;
+      }
+      .link:hover {
+        text-decoration: underline;
+      }
+
+      footer {
+        background-color: #2c3e50;
+        color: #fff;
+        text-align: center;
+        padding: 15px 0;
+        font-size: 0.9rem;
+      }
+    </style>
+
+     <nav class="navbar">
+  <ul class="nav-links">
+    <li><a href="/">Home</a></li>
+  </ul>
+</nav>
+
+<style>
+.navbar {
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;  /* CENTER the content */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: rgb(19, 17, 17);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ff6600;
+}
+</style>
+
+    
+
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Login</h2>
+
+    <form method="POST">
+      <input type="text" name="username" placeholder="Enter Username" required>
+      <input type="password" name="password" placeholder="Enter Password" required>
+      <button type="submit">Login</button>
+    </form>
+    <a class="link" href="/register">Don't have an account? Register</a>
+  </div>
+
+  <footer>
+    © 2025 Pet Care Hub | All rights reserved.
+  </footer>
+
+</body>
+</html>
